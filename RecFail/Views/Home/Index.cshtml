@@ -1,0 +1,114 @@
+﻿@model RecFail.Models.FormModel
+
+@{
+var result = "";
+var time = 0;
+var emulsion = "HP5";
+
+var selectedHP5 = "";
+var selectedFP4 = "";
+var selectedD100 = "";
+var selectedD400 = "";
+var selectedD3200 = "";
+var selectedPanF = "";
+var selectedXP2 = "";
+var selectedSFX = "";
+var selectedK100 = "";
+var selectedK400 = "";
+var activeHP5 = "";
+var activeFP4 = "";
+var activeD100 = "";
+var activeD400 = "";
+var activeD3200 = "";
+var activePanF = "";
+var activeXP2 = "";
+var activeSFX = "";
+var activeK100 = "";
+var activeK400 = "";
+var selected = "checked";
+var active = "active";
+
+if (Model != null)
+{
+   if (Model.result > 0.0) { result = Model.result.ToString() + ""; }
+   if (Model.time > 1) { time = Model.time; }
+   if (!String.IsNullOrWhiteSpace(Model.emulsion)) { emulsion = Model.emulsion; }
+}
+
+if (emulsion == "HP5") { selectedHP5 = selected; activeHP5 = active;  }
+if (emulsion == "FP4") { selectedFP4 = selected; activeFP4 = active; }
+if (emulsion == "D100") { selectedD100 = selected; activeD100 = active; }
+if (emulsion == "D400") { selectedD400 = selected; activeD400 = active; }
+if (emulsion == "D3200") { selectedD3200 = selected; activeD3200 = active; }
+if (emulsion == "PanF") { selectedPanF = selected; activePanF = active; }
+if (emulsion == "XP2") { selectedXP2 = selected; activeXP2 = active; }
+if (emulsion == "SFX") { selectedSFX = selected; activeSFX = active; }
+if (emulsion == "K100") { selectedK100 = selected; activeK100 = active; }
+if (emulsion == "K400") { selectedK400 = selected; activeK400 = active; }
+
+var timeValue = "";
+
+if (time > 0) 
+{
+    timeValue = "value=" + time;
+}
+
+    ViewData["Title"] = "Home Page";
+}
+
+
+<form asp-action="Index" asp-controller="Home">
+  <div class="row">
+    <div class="col col-lg-1">
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary autofocus @(activeHP5)">
+                <input type="radio" id="hp5" asp-for="emulsion" name="emulsion" value="HP5" @(selectedHP5) /> <img class="img-responsive center-block" src="~/images/hp5.jpg" width="40" height="40" alt="HP5+"> HP5+ 
+            </label>
+            <label class="btn btn-primary @(activeFP4)">
+                <input type="radio" id="fp4" asp-for="emulsion" name="emulsion" value="FP4" @(selectedFP4) /> <img class="img-responsive center-block" src="~/images/fp4.jpg" width="40" height="40" alt="FP4+"> FP4+ 
+            </label>
+            <label class="btn btn-primary @(activeD100)">
+                <input type="radio" id="d100" asp-for="emulsion" name="emulsion" value="D100" @(selectedD100) /> <img class="img-responsive center-block" src="~/images/d100.jpg" width="40" height="40" alt="Delta 100"> D100 
+            </label>   
+            <label class="btn btn-primary @(activeD400)">
+                <input type="radio" id="d400" asp-for="emulsion" name="emulsion" value="D400" @(selectedD400) /> <img class="img-responsive center-block" src="~/images/d400.jpg" width="40" height="40" alt="Delta 400"> D400 
+            </label>   
+            <label class="btn btn-primary @(activeD3200)">
+                <input type="radio" id="d3200" asp-for="emulsion" name="emulsion" value="D3200" @(selectedD3200) /> <img class="img-responsive center-block" src="~/images/d3200.jpg" width="40" height="40" alt="Delta 3200"> D3200 
+            </label>   
+            <label class="btn btn-primary @(activePanF)">
+                <input type="radio" id="panf" asp-for="emulsion" name="emulsion" value="PanF" @(selectedPanF) /> <img class="img-responsive center-block" src="~/images/panf.jpg" width="40" height="40" alt="PANF+"> PanF+ 
+            </label>     
+            <label class="btn btn-primary @(activeXP2)">
+                <input type="radio" id="xp2" asp-for="emulsion" name="emulsion" value="XP2" @(selectedXP2) /> <img class="img-responsive center-block" src="~/images/xp2.jpg" width="40" height="40" alt="XP2"> XP2 
+            </label>     
+            <label class="btn btn-primary @(activeSFX)">
+                <input type="radio" id="sfx" asp-for="emulsion" name="emulsion" value="SFX" @(selectedSFX) /> <img class="img-responsive center-block" src="~/images/sfx.jpg" width="40" height="40" alt="SFX+"> SFX 
+            </label>   
+            <label class="btn btn-primary @(activeK400)">
+                <input type="radio" id="k100" asp-for="emulsion" name="emulsion" value="k100" @(selectedK100) /> <img class="img-responsive center-block" src="~/images/k100.jpg" width="40" height="40" alt="Kentmere 100"> K100 
+            </label>   
+            <label class="btn btn-primary @(activeK400)">
+                <input type="radio" id="k400" asp-for="emulsion" name="emulsion" value="k400" @(selectedK400)  /> <img class="img-responsive center-block" src="~/images/k400.jpg" width="40" height="40" alt="Kentmere 400"> K400 
+            </label>               
+        </div>
+    </div>
+    <div class="col col-lg-2" align="center">
+      
+        <br>
+        <br>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon">T</span>
+          <input type="text" class="form-control" asp-for="time" placeholder="2 sec or greater..." aria-label="T" aria-describedby="basic-addon1" @(timeValue) >
+        </div>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-success">Calculate</button>
+        <br>
+        <br>
+        <br>
+        <span class="result">@(result)</span>
+    </div>
+  </div>
+ </form>

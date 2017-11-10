@@ -1,0 +1,75 @@
+﻿    body {
+        padding-top: 50px;
+        padding-bottom: 20px
+    }
+
+    /* Wrapping element */
+    /* Set some basic padding to keep content from hitting the edges */
+    .body-content {
+        padding: 15px 15px 0 15px;
+    }
+
+    /* Set widths on the form inputs since otherwise they're 100% wide */
+    input,
+    select,
+    textarea {
+        max-width: 280px
+    }
+
+    .btn-primary {
+        color: #464a4e;
+        background-color: #e7e8ea;
+        border-color: #dddfe2
+    }
+
+        .btn-primary:focus,
+        .btn-primary.focus {
+            color: #fff;
+            background-color: #23272b;
+            border-color: #c6c8ca
+        }
+
+        .btn-primary:hover {
+            color: #fff;
+            background-color: #23272b;
+            border-color: #c6c8ca
+        }
+
+    .btn-primary:active, .btn-primary.active {
+        color: #fff;
+        background-color: #23272b;
+        border-color: #c6c8ca
+    }
+
+
+    .btn-primary:active:hover,
+    .btn-primary.active:hover,
+    .open > .dropdown-toggle.btn-primary:hover,
+    .btn-primary:active:focus,
+    .btn-primary.active:focus,
+    .open > .dropdown-toggle.btn-primary:focus,
+    .btn-primary:active.focus,
+    .btn-primary.active.focus,
+    .open > .dropdown-toggle.btn-primary.focus {
+        color: #fff;
+        background-color: #23272b;
+        border-color: #c6c8ca
+    }
+
+    .result {
+        color: #000;
+        font-weight: bold;
+        font-size: 40px;
+        vertical-align: central
+    }
+
+    /* Hide/rearrange for smaller screens */
+    @media screen and (max-width: 767px) {
+    }
+
+@media all and (max-width: 480px) {
+    .half {
+        float: left !important;
+        width: 50% !important
+    }
+}

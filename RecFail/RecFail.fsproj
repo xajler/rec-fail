@@ -1,0 +1,109 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <MvcRazorCompileOnPublish>true</MvcRazorCompileOnPublish>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\banner1.svg" />
+    <Content Remove="wwwroot\images\banner2.svg" />
+    <Content Remove="wwwroot\images\banner3.svg" />
+    <Content Remove="wwwroot\images\banner4.svg" />
+    <Content Remove="wwwroot\android-icon-36x36.png" />
+    <Content Remove="wwwroot\android-icon-48x48.png" />
+    <Content Remove="wwwroot\android-icon-72x72.png" />
+    <Content Remove="wwwroot\android-icon-96x96.png" />
+    <Content Remove="wwwroot\android-icon-144x144.png" />
+    <Content Remove="wwwroot\android-icon-192x192.png" />
+    <Content Remove="wwwroot\apple-icon-57x57.png" />
+    <Content Remove="wwwroot\apple-icon-60x60.png" />
+    <Content Remove="wwwroot\apple-icon-72x72.png" />
+    <Content Remove="wwwroot\apple-icon-76x76.png" />
+    <Content Remove="wwwroot\apple-icon-114x114.png" />
+    <Content Remove="wwwroot\apple-icon-120x120.png" />
+    <Content Remove="wwwroot\apple-icon-144x144.png" />
+    <Content Remove="wwwroot\apple-icon-152x152.png" />
+    <Content Remove="wwwroot\apple-icon-180x180.png" />
+    <Content Remove="wwwroot\apple-icon-precomposed.png" />
+    <Content Remove="wwwroot\apple-icon.png" />
+    <Content Remove="wwwroot\browserconfig.xml" />
+    <Content Remove="wwwroot\favicon-16x16.png" />
+    <Content Remove="wwwroot\favicon-32x32.png" />
+    <Content Remove="wwwroot\favicon-96x96.png" />
+    <Content Remove="wwwroot\manifest.json" />
+    <Content Remove="wwwroot\ms-icon-70x70.png" />
+    <Content Remove="wwwroot\ms-icon-144x144.png" />
+    <Content Remove="wwwroot\ms-icon-150x150.png" />
+    <Content Remove="wwwroot\ms-icon-310x310.png" />
+    <Content Remove="wwwroot\images\d100.jpg" />
+    <Content Remove="wwwroot\images\d400.jpg" />
+    <Content Remove="wwwroot\images\d3200.jpg" />
+    <Content Remove="wwwroot\images\fp4.jpg" />
+    <Content Remove="wwwroot\images\hp5.jpg" />
+    <Content Remove="wwwroot\images\k100.jpg" />
+    <Content Remove="wwwroot\images\k400.jpg" />
+    <Content Remove="wwwroot\images\panf.jpg" />
+    <Content Remove="wwwroot\images\sfx.jpg" />
+    <Content Remove="wwwroot\images\xp2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models/ErrorViewModel.fs" />
+    <Compile Include="Models/FormModel.fs" />
+    <Compile Include="Models/Helper.fs" />
+    <Compile Include="Controllers/HomeController.fs" />
+    <Compile Include="Startup.fs" />
+    <Compile Include="Program.fs" />
+    <None Include="wwwroot\android-icon-36x36.png" />
+    <None Include="wwwroot\android-icon-48x48.png" />
+    <None Include="wwwroot\android-icon-72x72.png" />
+    <None Include="wwwroot\android-icon-96x96.png" />
+    <None Include="wwwroot\android-icon-144x144.png" />
+    <None Include="wwwroot\android-icon-192x192.png" />
+    <None Include="wwwroot\apple-icon-57x57.png" />
+    <None Include="wwwroot\apple-icon-60x60.png" />
+    <None Include="wwwroot\apple-icon-72x72.png" />
+    <None Include="wwwroot\apple-icon-76x76.png" />
+    <None Include="wwwroot\apple-icon-114x114.png" />
+    <None Include="wwwroot\apple-icon-120x120.png" />
+    <None Include="wwwroot\apple-icon-144x144.png" />
+    <None Include="wwwroot\apple-icon-152x152.png" />
+    <None Include="wwwroot\apple-icon-180x180.png" />
+    <None Include="wwwroot\apple-icon-precomposed.png" />
+    <None Include="wwwroot\apple-icon.png" />
+    <None Include="wwwroot\browserconfig.xml" />
+    <None Include="wwwroot\favicon-16x16.png" />
+    <None Include="wwwroot\favicon-32x32.png" />
+    <None Include="wwwroot\favicon-96x96.png" />
+    <None Include="wwwroot\manifest.json" />
+    <None Include="wwwroot\ms-icon-70x70.png" />
+    <None Include="wwwroot\ms-icon-144x144.png" />
+    <None Include="wwwroot\ms-icon-150x150.png" />
+    <None Include="wwwroot\ms-icon-310x310.png" />
+    <None Include="wwwroot\images\d100.jpg" />
+    <None Include="wwwroot\images\d400.jpg" />
+    <None Include="wwwroot\images\d3200.jpg" />
+    <None Include="wwwroot\images\fp4.jpg" />
+    <None Include="wwwroot\images\hp5.jpg" />
+    <None Include="wwwroot\images\k100.jpg" />
+    <None Include="wwwroot\images\k400.jpg" />
+    <None Include="wwwroot\images\panf.jpg" />
+    <None Include="wwwroot\images\sfx.jpg" />
+    <None Include="wwwroot\images\xp2.jpg" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <ProjectReference Include="..\core\core.fsproj" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <TextStylePolicy FileWidth="120" RemoveTrailingWhitespace="True" EolMarker="Native" TabWidth="2" TabsToSpaces="True" IndentWidth="2" NoTabsAfterNonTabs="True" scope="text/x-html" />
+          <HTMLFormattingPolicy FormatOnPaste="True" XHTMLCodingStyle="True" scope="text/x-html" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>
